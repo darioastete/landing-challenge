@@ -4,6 +4,12 @@ A responsive landing page built with **Next.js 15**, **React 19**, and **Tailwin
 
 ---
 
+## 🌐 Deployment
+
+> 🟢 Live Demo: [https://landing-challenge-gamma.vercel.app](https://landing-challenge-gamma.vercel.app)
+
+---
+
 ## 📦 Tech Stack
 
 - **Framework:** [Next.js 15](https://nextjs.org/)
@@ -11,10 +17,6 @@ A responsive landing page built with **Next.js 15**, **React 19**, and **Tailwin
 - **Styling:** [Tailwind CSS 4](https://tailwindcss.com/)
 - **Icons:** [Lucide React](https://lucide.dev/)
 - **Slider:** [React Slick](https://react-slick.neostack.com/)
-- **Animation & Utility Tools:**
-  - [`class-variance-authority`](https://cva.style/)
-  - [`clsx`](https://github.com/lukeed/clsx)
-  - [`tailwind-merge`](https://tailwind-merge.vercel.app/)
 - **Radix UI Slot:** For advanced slot-based component patterns
 
 ---
