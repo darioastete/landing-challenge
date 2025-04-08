@@ -1,4 +1,4 @@
-import { getHeroSection, postMessage } from "@/app/services";
+import { getHeroSection, getMessage, postMessage } from "@/app/services";
 import { useEffect, useState } from "react";
 import { SliderResponse } from "./HeroSection.types";
 import { HeroLeadDTO } from "@/app/services/types";
@@ -8,14 +8,18 @@ export const useHeroSection = () => {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(false);
   const [posting, setPosting] = useState(false);
+  const [message, setMessage] = useState("");
 
   useEffect(() => {
     const fetchData = async () => {
       try {
         setLoading(true);
         const data = await getHeroSection();
+        const response = await getMessage();
         setSliders(data);
         setLoading(false);
+        setMessage(response.message);
+        console.log('RESPONSE FROM MESSAGE: ', response.message);
       } catch (err) {
         console.error(err);
         setLoading(false);
@@ -38,5 +42,5 @@ export const useHeroSection = () => {
     }
   };
 
-  return { sliders, loading, error, posting, sendMessage };
+  return { sliders, loading, error, posting, sendMessage, message };
 }

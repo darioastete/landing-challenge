@@ -17,7 +17,6 @@ export function useActiveSection(links: LinkItem[]) {
       const observer = new IntersectionObserver(
         ([entry]) => {
           if (entry.isIntersecting) {
-            console.log("Entra", link.href);
             setHash(link.href);
           }
         },
@@ -32,6 +31,7 @@ export function useActiveSection(links: LinkItem[]) {
       observers.forEach((observer) => observer.disconnect());
     };
   }, [links]);
+
   useEffect(() => {
     const handleScroll = () => {
       if (window.scrollY < 100) {

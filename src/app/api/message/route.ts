@@ -7,3 +7,9 @@ export async function POST(request: Request) {
     message: 'Data received successfully',
   });
 }
+export async function GET() {
+  return NextResponse.json({
+    message: 'Hello from GET',
+  });
+}
+

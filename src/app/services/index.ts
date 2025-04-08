@@ -11,6 +11,10 @@ export async function postMessage(body: HeroLeadDTO) {
   return await res.json();
 }
 
+export async function getMessage() {
+  const res = await fetch('/api/message');
+  return await res.json();
+}
 
 export async function getHeroSection() {
   const res = await fetch('/api/hero');
